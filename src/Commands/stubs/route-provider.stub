@@ -23,8 +23,8 @@ class $CLASS$ extends ServiceProvider
     public function map(): void
     {
         $this->mapApiRoutes();
-
         $this->mapWebRoutes();
+        $this->mapAdminRoutes();
     }
 
     /**
@@ -35,6 +35,16 @@ class $CLASS$ extends ServiceProvider
     protected function mapWebRoutes(): void
     {
         Route::middleware('web')->group(module_path('$MODULE$', '$WEB_ROUTES_PATH$'));
+    }
+
+    /**
+     * Define the "admin" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     */
+    protected function mapAdminRoutes(): void
+    {
+        Route::middleware('admin')->group(module_path('$MODULE$', '/routes/admin.php'));
     }
 
     /**

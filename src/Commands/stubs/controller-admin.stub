@@ -14,7 +14,7 @@ class $CLASS$ extends Controller
      */
     public function index()
     {
-        return view('$LOWER_NAME$::front.index');
+        return view('$LOWER_NAME$::admin.index');
     }
 
     /**
@@ -22,7 +22,7 @@ class $CLASS$ extends Controller
      */
     public function create()
     {
-        return view('$LOWER_NAME$::front.create');
+        return view('$LOWER_NAME$::admin.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class $CLASS$ extends Controller
      */
     public function show($id)
     {
-        return view('$LOWER_NAME$::front.show');
+        return view('$LOWER_NAME$::admin.show');
     }
 
     /**
@@ -46,7 +46,7 @@ class $CLASS$ extends Controller
      */
     public function edit($id)
     {
-        return view('$LOWER_NAME$::front.edit');
+        return view('$LOWER_NAME$::admin.edit');
     }
 
     /**

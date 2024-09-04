@@ -1,7 +1,7 @@
-@extends('$LOWER_NAME$::front.layouts.master')
+@extends('$LOWER_NAME$::admin.layouts.master')
 
 @section('content')
-    <h1>Hello World front page</h1>
+    <h1>Hello World admin page</h1>
 
     <p>Module: {!! config('$LOWER_NAME$.name') !!}</p>
 @endsection
