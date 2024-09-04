@@ -438,6 +438,13 @@ class ModuleGenerator extends Generator
                 'module' => $this->getName(),
             ] + $options);
         }
+        if (GenerateConfigReader::read('controller')->generate() === true) {
+            $options = $this->type == 'api' ? ['--api' => true] : [];
+            $this->console->call('module:make-admincontroller', [
+                'controller' => $this->getName().'Controller',
+                'module' => $this->getName(),
+            ] + $options);
+        }
     }
 
     /**
