@@ -1,0 +1,16 @@
+stages:
+  - build
+  - publish
+
+build:
+  stage: build
+  script:
+    - composer install --no-dev
+
+publish:
+  stage: publish
+  script:
+    - composer config --global gitlab-token.gitlab.iap.websignal.eu ${CI_JOB_TOKEN}
+    - composer publish
+  only:
+    - tags
